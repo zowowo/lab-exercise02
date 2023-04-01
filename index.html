@@ -7,7 +7,7 @@
 <body>
     <h1>Group Name</h1>
     <div class="table-container">
-        <table cellspacing="0">
+        <table cellspacing="0" id="tbl_prof">
             <tr>
                 <th>Picture</th>
                 <th>Names</th>
@@ -106,7 +106,7 @@
                 </td>
 </table>
     </div>
-    <form>
+    <form id="formtbl">
         <fieldset>
             <label for="file">
                 Picture
@@ -126,13 +126,13 @@
             </label>
 
             <label>Role</label>
-            <select>
+            <select id="role_slct">
                 <option>UI-Design</option>
                 <option>UX-Design</option>
                 <option>Full-Stack</option>
             </select>
             <label>Course</label>
-            <select>
+            <select id="course_slct">
                 <option>BSCS</option>
                 <option>BSIT</option>
                 <option>MMA</option>
