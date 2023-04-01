@@ -24,7 +24,7 @@
                 <td>UI-Dev</td>
                 <td>BSCS</td>
                 <td>
-                    <button class="button">
+                    <button class="button" onclick="removeRow(this);">
                         <div class="delete">
                             <img class="icon-delete"
                                  src="https://cdn-icons-png.flaticon.com/512/1214/1214428.png"
@@ -42,7 +42,7 @@
                 <td>UI-Dev</td>
                 <td>BSCS</td>
                 <td>
-                    <button class="button">
+                    <button class="button" onclick="removeRow(this);">
                         <div class="delete">
                             <img class="icon-delete"
                                  src="https://cdn-icons-png.flaticon.com/512/1214/1214428.png"
@@ -60,7 +60,7 @@
                 <td>Full-Stack</td>
                 <td>BSCS</td>
                 <td>
-                    <button class="button">
+                    <button class="button" onclick="removeRow(this);">
                         <div class="delete">
                             <img class="icon-delete"
                                  src="https://cdn-icons-png.flaticon.com/512/1214/1214428.png"
@@ -78,7 +78,7 @@
                 <td>UX-Dev</td>
                 <td>BSCS</td>
                 <td>
-                    <button class="button">
+                    <button class="button" onclick="removeRow(this);">
                         <div class="delete">
                             <img class="icon-delete"
                                  src="https://cdn-icons-png.flaticon.com/512/1214/1214428.png"
@@ -96,7 +96,7 @@
                 <td>Full-Stack</td>
                 <td>Tourism</td>
                 <td>
-                    <button class="button">
+                    <button class="button" onclick="removeRow(this);">
                         <div class="delete">
                             <img class="icon-delete"
                                  src="https://cdn-icons-png.flaticon.com/512/1214/1214428.png"
@@ -126,7 +126,8 @@
                 type="text"
                 class="form-control"
                 placeholder="Enter your Name"
-                required />
+                required
+                onkeypress="allLetter(this)"/>
             </label>
 
             <label>Role</label>
@@ -146,9 +147,19 @@
             </select>
             <input type="button" 
             value="Submit" 
-            id="btn-submit" />
+            id="btn-submit" onclick="submitForm()";/> 
         </fieldset>
     </form>
 
+    <script>
+        document.getElementById("formtbl").addEventListener("submit", function (event) { event.preventDefault(); submitForm(); });
+        function submitForm() {
+                    let name = document.getElementById("name").value;
+                    let course = document.getElementById("course_slct").value;
+                    let role = document.getElementById("role_slct").value;
+                    window.location.href = "index2.html?name=" + name + "&role_slct=" + role + "&course_slct=" + course;
+                }
+        </script>
+</script>
 </body>
 </html>

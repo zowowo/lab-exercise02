@@ -21,7 +21,7 @@
                 <td>UI-Dev</td>
                 <td>BSCS</td>
                 <td>
-                    <button class="button">
+                    <button class="button" onclick="removeRow(this);">
                         <div class="delete">
                             <img class="icon-delete"
                                  src="https://cdn-icons-png.flaticon.com/512/6460/6460112.png"
@@ -39,7 +39,7 @@
                 <td>UI-Dev</td>
                 <td>BSCS</td>
                 <td>
-                    <button class="button">
+                    <button class="button" onclick="removeRow(this);">
                         <div class="delete">
                             <img class="icon-delete"
                                  src="https://cdn-icons-png.flaticon.com/512/6460/6460112.png"
@@ -57,7 +57,7 @@
                 <td>Full-Stack</td>
                 <td>BSCS</td>
                 <td>
-                    <button class="button">
+                    <button class="button" onclick="removeRow(this);">
                         <div class="delete">
                             <img class="icon-delete"
                                  src="https://cdn-icons-png.flaticon.com/512/6460/6460112.png"
@@ -75,7 +75,7 @@
                 <td>UX-Dev</td>
                 <td>BSCS</td>
                 <td>
-                    <button class="button">
+                    <button class="button" onclick="removeRow(this);">
                         <div class="delete">
                             <img class="icon-delete"
                                  src="https://cdn-icons-png.flaticon.com/512/6460/6460112.png"
@@ -94,6 +94,27 @@
             <input type="button" value="Return to Profile Page" id="return-btn" onclick='window.location.replace("index.html")'/>
         </fieldset>
     </form>
+
+    <script>
+            let urlParams = new URLSearchParams(window.location.search);
+            let name = urlParams.get('name')
+            let course = urlParams.get('course_slct')
+            let role = urlParams.get('role_slct')
+
+            let table = document.getElementById("tbl_prof")
+            let row = table.insertRow();
+            
+            let pictureCell = row.insertCell(0);
+            let nameCell = row.insertCell(1);
+            let roleCell = row.insertCell(2);
+            let courseCell = row.insertCell(3);
+
+            pictureCell.innerHTML = "picture placeholder";
+            nameCell.innerHTML = name;
+            courseCell.innerHTML = course;
+            roleCell.innerHTML = role;
+        
+    </script>
 
 </body>
 </html>
