@@ -4,13 +4,14 @@
 body {
     width: 100%;
     height: 100%;
-    background-color: #ffebe9;
+    background-color: #141b2d;
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
 }
 
 h1 
 {
+    color: white;
     text-align: center;
     font-style: italic;
     font-weight: 500;
@@ -19,29 +20,31 @@ h1
     width: 100%;
     display: flex;
     justify-content: center;
-    background: #ffffff;
     color: #000f;
 }
 
 table
 {
-    width: 70%;
-    border: solid black 1px;
-    border-radius: 0.5rem;
+    color: white;
 }
 
 th, td {
-    justify-content: center;
     padding: 0.5cm;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #4b4d51;
+
 }
 
 th {
-    background-color: #051337;
+    background-color: #2a2d64;
     color: #fff;
 }
+
+tr {
+    background-color: #1f2a40;
+}
+
 tr:hover {
-    background-color: #b4b8c3;
+    background-color: #313b4f;
 }
 
 .profile-img
@@ -51,19 +54,19 @@ tr:hover {
     border-radius: 75%;
 }
 
-form {
+form 
+{
     width: 50%;
     padding: 2rem;
-    margin-top: 25%;
-    margin: 1rem auto;
-    background: #ffffff;
-    color: #000f;
+    margin: 3em auto;
+    background: #383838;
+    color: #fff;
     border-radius: 0.5rem;
-    box-shadow: 10px 10px #f6d1cb;
 }
 
 
-input, select, textarea {
+input, select, textarea 
+{
     width: 100%;
     padding: 0.25rem;
     font-family: inherit;
@@ -86,14 +89,17 @@ button
 .delete
 {
     display: flex;
+    justify-content: space-evenly;
 }
 
-.delete span {
-        display: inline-flex;
-        align-items: center;
-    }
+.delete span 
+{
+    display: inline-flex;
+    align-items: center;
+}
 
-.button {
+.button 
+{
     position: relative;
     border: none;
     outline: none;
@@ -103,15 +109,20 @@ button
     min-width: 142px;
     cursor: pointer;
     display: flex;
-    color: #fff;
-    background: #2B3044;
+    color: #244b41;
+    background: #4cceac;
 }
 
+.button:hover
+{
+    background: #359078;
+}
 input[type="button"] {
     width: 30%;
     margin: auto;
     border-radius: .25rem;
     border: none;
+    cursor: pointer;
 }
 
 input[type="button"]:hover {
@@ -120,4 +131,18 @@ input[type="button"]:hover {
     border-radius: .25rem;
     border: 1px;
     background-color: lightgray;
+}
+
+.form-control{
+    display: block;
+    width: 90%;
+}
+
+input:invalid {
+  border-bottom: solid 2px red;
+}
+
+fieldset
+{
+    border: none;
 }
