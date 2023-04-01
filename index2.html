@@ -3,6 +3,7 @@
 <head>
     <link rel="stylesheet" href="style.css">
     <title>GROUP NAME</title>
+    <script type="text/javascript" src="index.js"></script>
 </head>
 <body>
     <h1>Group Name</h1>
@@ -94,14 +95,11 @@
             <input type="button" value="Return to Profile Page" id="return-btn" onclick='window.location.replace("index.html")' />
         </fieldset>
     </form>
-
-    <script type="text/javascript" src="index.js"></script>
     <script>
         let urlParams = new URLSearchParams(window.location.search);
         let name = urlParams.get('name')
         let course = urlParams.get('course_slct')
         let role = urlParams.get('role_slct')
-=
         let table = document.getElementById("tbl_prof")
         let row = table.insertRow();
 
@@ -116,7 +114,6 @@
         courseCell.innerHTML = course;
         roleCell.innerHTML = role;
         buttonCell.innerHTML = "<button class='button' onclick='removeRow(this);'>Delete</button>";
-
     </script>
 
 </body>
