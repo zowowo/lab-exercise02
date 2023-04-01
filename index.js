@@ -1,9 +1,3 @@
-function removeRow(row) {
-    var table = document.getElementById("tbl_prof");
-    var rowIndex = row.parentNode.parentNode.rowIndex;
-    table.deleteRow(rowIndex);
-}
-
 function allLetter(inputtxt) {
     var letters = /^[a-z]*$/i;
     if (!inputtxt.value.match(letters)) {

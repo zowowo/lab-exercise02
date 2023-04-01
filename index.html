@@ -2,10 +2,7 @@
 <html>
 <head>
     <link rel="stylesheet" href="style.css">
-    <link src="ind">
     <title>GROUP NAME</title>
-
-    <script type="text/javascript" src="index.js"></script>
 </head>
 <body>
     <h1>Group Name</h1>
@@ -154,11 +151,17 @@
     <script>
         document.getElementById("formtbl").addEventListener("submit", function (event) { event.preventDefault(); submitForm(); });
         function submitForm() {
-                    let name = document.getElementById("name").value;
-                    let course = document.getElementById("course_slct").value;
-                    let role = document.getElementById("role_slct").value;
-                    window.location.href = "index2.html?name=" + name + "&role_slct=" + role + "&course_slct=" + course;
-                }
+            let name = document.getElementById("name").value;
+            let course = document.getElementById("course_slct").value;
+            let role = document.getElementById("role_slct").value;
+            window.location.href = "index2.html?name=" + name + "&role_slct=" + role + "&course_slct=" + course;
+        }
+        function removeRow(row) {
+            var table = document.getElementById("tbl_prof");
+            var rowIndex = row.parentNode.parentNode.rowIndex;
+            table.deleteRow(rowIndex);
+        }
     </script>
+    <script type="text/javascript" src="index.js"></script>
 </body>
 </html>

@@ -3,7 +3,6 @@
 <head>
     <link rel="stylesheet" href="style.css">
     <title>GROUP NAME</title>
-    <script type="text/javascript" src="index.js"></script>
 </head>
 <body>
     <h1>Group Name</h1>
@@ -114,7 +113,12 @@
         courseCell.innerHTML = course;
         roleCell.innerHTML = role;
         buttonCell.innerHTML = "<button class='button' onclick='removeRow(this);'>Delete</button>";
+        function removeRow(row) {
+            var table = document.getElementById("tbl_prof");
+            var rowIndex = row.parentNode.parentNode.rowIndex;
+            table.deleteRow(rowIndex);
+        }
     </script>
-
+    <script type="text/javascript" src="index.js"></script>
 </body>
 </html>
