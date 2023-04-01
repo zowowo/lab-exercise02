@@ -21,14 +21,27 @@ h1
     justify-content: center;
     background: #ffffff;
     color: #000f;
+}
+
+table
+{
+    width: 70%;
     border: solid black 1px;
     border-radius: 0.5rem;
 }
 
-table, th, td{
-    width: 50%;
+th, td {
     justify-content: center;
     padding: 0.5cm;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #051337;
+    color: #fff;
+}
+tr:hover {
+    background-color: #b4b8c3;
 }
 
 .profile-img
@@ -36,4 +49,75 @@ table, th, td{
     width: 150px;
     height: 150px;
     border-radius: 75%;
+}
+
+form {
+    width: 50%;
+    padding: 2rem;
+    margin-top: 25%;
+    margin: 1rem auto;
+    background: #ffffff;
+    color: #000f;
+    border-radius: 0.5rem;
+    box-shadow: 10px 10px #f6d1cb;
+}
+
+
+input, select, textarea {
+    width: 100%;
+    padding: 0.25rem;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+}
+
+button
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+}
+.icon-delete{
+    width: 20px;
+}
+
+.delete
+{
+    display: flex;
+}
+
+.delete span {
+        display: inline-flex;
+        align-items: center;
+    }
+
+.button {
+    position: relative;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 10px 24px;
+    border-radius: 7px;
+    min-width: 142px;
+    cursor: pointer;
+    display: flex;
+    color: #fff;
+    background: #2B3044;
+}
+
+input[type="button"] {
+    width: 30%;
+    margin: auto;
+    border-radius: .25rem;
+    border: none;
+}
+
+input[type="button"]:hover {
+    width: 30%;
+    margin: auto;
+    border-radius: .25rem;
+    border: 1px;
+    background-color: lightgray;
 }

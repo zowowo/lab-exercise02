@@ -7,7 +7,7 @@
 <body>
     <h1>Group Name</h1>
     <div class="table-container">
-        <table id="tbl_prof">
+        <table cellspacing="0">
             <tr>
                 <th>Picture</th>
                 <th>Names</th>
@@ -20,39 +20,93 @@
                 <td>Adriel Nigel Eustaquio</td>
                 <td>UI-Dev</td>
                 <td>BSCS</td>
-                <td><input type="button" value="Delete" class="delete-btn" /></td>
+                <td>
+                    <button class="button">
+                        <div class="delete">
+                            <img class="icon-delete"
+                                 src="https://cdn-icons-png.flaticon.com/512/6460/6460112.png"
+                                 alt="delete" />
+                            <span>
+                                Delete Item
+                            </span>
+                        </div>
+                    </button>
+                </td>
             </tr>
             <tr>
                 <td><img src="assets\robbypfp.png" alt="robby" class="profile-img" /></td>
                 <td>Robby Galang</td>
                 <td>UI-Dev</td>
                 <td>BSCS</td>
-                <td><input type="button" value="Delete" class="delete-btn" /></td>
+                <td>
+                    <button class="button">
+                        <div class="delete">
+                            <img class="icon-delete"
+                                 src="https://cdn-icons-png.flaticon.com/512/6460/6460112.png"
+                                 alt="delete" />
+                            <span>
+                                Delete Item
+                            </span>
+                        </div>
+                    </button>
+                </td>
             </tr>
             <tr>
                 <td><img src="assets\zoepfp.png" alt="zoe" class="profile-img" /></td>
                 <td>Zoe Pineda</td>
                 <td>Full-Stack</td>
                 <td>BSCS</td>
-                <td><input type="button" value="Delete" class="delete-btn" /></td>
+                <td>
+                    <button class="button">
+                        <div class="delete">
+                            <img class="icon-delete"
+                                 src="https://cdn-icons-png.flaticon.com/512/6460/6460112.png"
+                                 alt="delete" />
+                            <span>
+                                Delete Item
+                            </span>
+                        </div>
+                    </button>
+                </td>
             </tr>
             <tr>
                 <td><img src="assets\allenpfp.png" alt="allen" class="profile-img" /></td>
                 <td>Allen Migel Santamena</td>
                 <td>UX-Dev</td>
                 <td>BSCS</td>
-                <td><input type="button" value="Delete" class="delete-btn" /></td>
+                <td>
+                    <button class="button">
+                        <div class="delete">
+                            <img class="icon-delete"
+                                 src="https://cdn-icons-png.flaticon.com/512/6460/6460112.png"
+                                 alt="delete" />
+                            <span>
+                                Delete Item
+                            </span>
+                        </div>
+                    </button>
+                </td>
             </tr>
             <tr>
                 <td></td>
                 <td>John Doe</td>
                 <td>Full-Stack</td>
                 <td>Tourism</td>
-                <td><input type="button" value="Delete" class="delete-btn" /></td>
-            </tr>
-        </table>
+                <td>
+                    <button class="button">
+                        <div class="delete">
+                            <img class="icon-delete"
+                                 src="https://cdn-icons-png.flaticon.com/512/6460/6460112.png"
+                                 alt="delete" />
+                            <span>
+                                Delete Item
+                            </span>
+                        </div>
+                    </button>
+                </td>
+</table>
     </div>
-    <form id="formtbl">
+    <form>
         <fieldset>
             <label for="file">
                 Picture
@@ -67,24 +121,24 @@
                        name="name"
                        type="text"
                        class="form-control"
+                       placeholder="Enter your Name"
                        required />
             </label>
 
             <label>Role</label>
-            <select id="role_slct">
+            <select>
                 <option>UI-Design</option>
                 <option>UX-Design</option>
                 <option>Full-Stack</option>
             </select>
             <label>Course</label>
-            <select id="course_slct">
+            <select>
                 <option>BSCS</option>
                 <option>BSIT</option>
                 <option>MMA</option>
                 <option>TOURISM</option>
             </select>
-
-            <input type="button" value="View Member List" id="btn-submit" />
+            <input type="button" value="Submit" id="btn-submit" />
         </fieldset>
     </form>
 
