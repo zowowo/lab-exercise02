@@ -107,58 +107,58 @@
                         </div>
                     </button>
                 </td>
-</table>
+        </table>
     </div>
     <form id="formtbl">
         <fieldset>
             <label for="file">
                 Picture
                 <input id="file"
-                type="file"
-                name="file"
-                class="form-control"
-                required />
+                       type="file"
+                       name="file"
+                       class="form-control"
+                       required />
             </label>
             <label>
                 Name
                 <input id="name"
-                name="name"
-                type="text"
-                class="form-control"
-                placeholder="Enter your Name"
-                required
-                onkeypress="allLetter(this)"/>
+                       name="name"
+                       type="text"
+                       class="form-control"
+                       placeholder="Enter your Name"
+                       required
+                       onkeypress="allLetter(this)" />
             </label>
 
             <label>Role</label>
-            <select id="role_slct" 
-            class="form-control">
+            <select id="role_slct"
+                    class="form-control">
                 <option>UI-Design</option>
                 <option>UX-Design</option>
                 <option>Full-Stack</option>
             </select>
             <label>Course</label>
-            <select id="course_slct" 
-            class="form-control">
+            <select id="course_slct"
+                    class="form-control">
                 <option>BSCS</option>
                 <option>BSIT</option>
                 <option>MMA</option>
                 <option>TOURISM</option>
             </select>
-            <input type="button" 
-            value="Submit" 
-            id="btn-submit" onclick="submitForm()";/> 
+            <input type="button"
+                   value="Submit"
+                   id="btn-submit" onclick="submitForm()" ; />
         </fieldset>
     </form>
 
     <script>
         document.getElementById("formtbl").addEventListener("submit", function (event) { event.preventDefault(); submitForm(); });
         function submitForm() {
-        Â Â Â Â Â Â Â Â Â Â Â  let name = document.getElementById("name").value;
-        Â Â Â Â Â Â Â Â Â Â Â  let course = document.getElementById("course_slct").value;
-        Â Â Â Â Â Â Â Â Â Â Â  let role = document.getElementById("role_slct").value;
-        Â Â Â Â Â Â Â Â Â Â Â  window.location.href = "index2.html?name=" + name + "&role_slct=" + role + "&course_slct=" + course;
-        Â Â Â Â Â Â Â  }
-        </script>
+                    let name = document.getElementById("name").value;
+                    let course = document.getElementById("course_slct").value;
+                    let role = document.getElementById("role_slct").value;
+                    window.location.href = "index2.html?name=" + name + "&role_slct=" + role + "&course_slct=" + course;
+                }
+    </script>
 </body>
 </html>
