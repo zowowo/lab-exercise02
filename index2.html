@@ -90,30 +90,32 @@
         </table>
     </div>
     <form id="formtbl">
-        <fieldset>           
-            <input type="button" value="Return to Profile Page" id="return-btn" onclick='window.location.replace("index.html")'/>
+        <fieldset>
+            <input type="button" value="Return to Profile Page" id="return-btn" onclick='window.location.replace("index.html")' />
         </fieldset>
     </form>
-
+    <script type="text/javascript" src="index.js"></script>
     <script>
-            let urlParams = new URLSearchParams(window.location.search);
-            let name = urlParams.get('name')
-            let course = urlParams.get('course_slct')
-            let role = urlParams.get('role_slct')
+        let urlParams = new URLSearchParams(window.location.search);
+        let name = urlParams.get('name')
+        let course = urlParams.get('course_slct')
+        let role = urlParams.get('role_slct')
 
-            let table = document.getElementById("tbl_prof")
-            let row = table.insertRow();
-            
-            let pictureCell = row.insertCell(0);
-            let nameCell = row.insertCell(1);
-            let roleCell = row.insertCell(2);
-            let courseCell = row.insertCell(3);
+        let table = document.getElementById("tbl_prof")
+        let row = table.insertRow();
 
-            pictureCell.innerHTML = "picture placeholder";
-            nameCell.innerHTML = name;
-            courseCell.innerHTML = course;
-            roleCell.innerHTML = role;
-        
+        let pictureCell = row.insertCell(0);
+        let nameCell = row.insertCell(1);
+        let roleCell = row.insertCell(2);
+        let courseCell = row.insertCell(3);
+        let buttonCell = row.insertCell(4);
+
+        pictureCell.innerHTML = "picture placeholder";
+        nameCell.innerHTML = name;
+        courseCell.innerHTML = course;
+        roleCell.innerHTML = role;
+        buttonCell.innerHTML = "<button class='button' onclick='removeRow(this);'>Delete</button>";
+
     </script>
 
 </body>
